@@ -5,7 +5,18 @@ module.exports = class Timetable {
     async getByDay(day) {
         const Model = this.Model
 
-        const items = await Model.findOne({day: day}).populate('animes')
+        const items = await Model.
+            findOne({day: day}).
+            populate('animes', [
+                'name',
+                'title',
+                'released_time',
+                'release_broadcaster',
+                'imageUrl',
+                'smallImageUrl',
+                'items'
+            ])
+        
         return items || []
     }
 }
