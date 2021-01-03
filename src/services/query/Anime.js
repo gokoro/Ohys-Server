@@ -9,4 +9,11 @@ module.exports = class Anime {
             return null
         }
     }
+    async getByName(name) {
+        try {
+            return await this.Model.findOne({ name }).exec()
+        } catch (error) {
+            return null
+        }
+    }
 }

@@ -10,7 +10,7 @@ module.exports.handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false
 
     if (connection === null) {
-        connection = await mongooseLoader()
+        connection = await mongooseLoader.connect()
     }
 
     await connection

@@ -25,3 +25,4 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+    packager: 'yarn'

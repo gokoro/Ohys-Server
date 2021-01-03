@@ -5,11 +5,19 @@ const AnimeModel = require('../../models/Animes')
 const Anime = require('../query/Anime')
 
 module.exports = async params => {
-    const { id } = params
+    const { id, name } = params
     const anime = new Anime(AnimeModel)
 
-    const item = await anime.getById(id)
+    let item = null
 
+    if (id) {
+        item = await anime.getById(id)
+    }
+
+    if (name) {
+        item = await anime.getByName(name)
+    }
+    
     return {
         status: item !== null,
         item
