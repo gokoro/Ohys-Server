@@ -1,3 +1,3 @@
 # Ohys-Function
 
-Duplicated from [Ohys-Server](https://github.com/gokoro/Ohys-Server)
+Duplicated from [Ohys-Server-Native](https://github.com/gokoro/Ohys-Server-Native)
