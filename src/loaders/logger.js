@@ -2,22 +2,22 @@ const winston = require('winston')
 const config = require('../config')
 
 const logger = winston.createLogger({
-    level: config.debug,
-    
-    format: winston.format.combine(
-        winston.format.errors({ stack: true }),
-        winston.format.splat(),
-        winston.format.ms(),
-        winston.format.json()
-    ),
+  level: config.debug,
 
-    transports: [
-        new winston.transports.Console({
-            format: winston.format.combine(
-              winston.format.colorize(),
-              winston.format.simple(),
-            )
-        })
-    ]
+  format: winston.format.combine(
+    winston.format.errors({ stack: true }),
+    winston.format.splat(),
+    winston.format.ms(),
+    winston.format.json()
+  ),
+
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.simple()
+      ),
+    }),
+  ],
 })
 module.exports = logger
