@@ -1,10 +1,8 @@
 {
   "name": "ohys-function",
-  "version": "1.0.0",
-  "author": "Gokoro <lincroe@gmail.com>",
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/server.js",
     "offline": "serverless offline",
     "deploy": "serverless deploy -v"
   },
@@ -16,10 +14,10 @@
     "koa-router": "^9.1.0",
     "mongoose": "^5.9.28",
     "serverless-http": "^2.5.0",
-    "serverless-offline": "^6.7.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.3.5",
     "webpack": "^4.44.1",
     "webpack-node-externals": "^2.5.2"
