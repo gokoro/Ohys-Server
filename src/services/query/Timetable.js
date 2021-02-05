@@ -8,10 +8,15 @@ module.exports = class Timetable {
     const items = await Model.findOne({ day: day }).populate('animes', [
       'name',
       'title',
+      'imageUrl',
+      'bannerImage',
+      'color',
+      'season',
+      'released_year',
+      'description',
       'released_time',
       'release_broadcaster',
-      'imageUrl',
-      'smallImageUrl',
+      'episode_info',
       'items',
     ])
 
