@@ -10,12 +10,10 @@ functions:
   app:
     handler: src/serverless.handler
     events:
-      - http:
-          path: /
-          method: ANY
-      - http:
+      - httpApi: '*'
+      - httpApi:
           path: /{any+}
-          method: ANY
+          method: '*'
 
 plugins:
   - serverless-offline
