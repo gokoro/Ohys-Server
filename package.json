@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node src/server.js",
     "offline": "serverless offline",
-    "deploy": "serverless deploy -v"
+    "deploy": "serverless deploy",
+    "deploy:prod": "serverless deploy --stage production"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "esbuild": "^0.14.8",
     "esbuild-node-externals": "^1.4.1",
+    "serverless": "^3.12.0",
     "serverless-esbuild": "^1.23.2",
     "serverless-offline": "^6.8.0"
   }
